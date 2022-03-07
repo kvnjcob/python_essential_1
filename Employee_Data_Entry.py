@@ -30,3 +30,8 @@ for index in range(int(emp_number)):
     print(emp_last_name)
     print(age)
 
+    sum_of_age = sum_of_age + age
+
+    if sum_of_age > 500:
+        print("The sum of ages is above 500 ")
+
