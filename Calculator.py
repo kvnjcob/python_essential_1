@@ -7,6 +7,10 @@ def input_numbers(number_count):
             return number_input
 
 
+def line():
+    print("==================================")
+
+
 def addition(num1, num2):
     number_add = num1 + num2
     print(f"Addition of {num1} + {num2} = {number_add}")
@@ -34,19 +38,26 @@ if __name__ == '__main__':
         number1 = int(input_numbers("first number"))
         number2 = int(input_numbers("second number"))
 
-        print("+ for Addition " + "- for Subtraction " + "/ for Division " + "* for Multiplication" + "q for Exit")
+        print("+ for Addition, " + "- for Subtraction, " + "/ for Division, " + "* for Multiplication, " +
+              "q for Exit")
         choice = input("Select an option from the above : ")
 
         if choice == '+':
             addition(number1, number2)
+            line()
         elif choice == '-':
             subtraction(number1, number2)
+            line()
         elif choice == '/':
             if number2 == 0:
                 print("Division by zero is impossible")
             else:
                 division(number1, number2)
+                line()
         elif choice == '*':
             multiplication(number1, number2)
+            line()
         elif choice == 'q':
+            print("===========EXIT===========")
             break
+            line()
